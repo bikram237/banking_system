@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}THE INTERN BANK{% endblock title %}
+
+{% block body %}
+<style>
+    body {background-image: url('static/image1.jpg');
+    background-size: 1920px 1000px;
+    background-repeat: no-repeat;
+    }
+
+    .centered {
+  position: absolute;
+  top: 14%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+   div{
+       font-family: 'Courier New', Courier, monospace;
+       font-size: 40px;
+   }
+   .container1{
+       position: absolute;
+       top: 50%;
+       right:40%;
+       
+
+   }
+</style>
+ 
+<div class="container" >
+    <div class="centered" style="background-color: grey; color: black;">
+        Welcome to Intern Bank </div> 
+</div>
+
+<div class="container1">
+    <form class="d-flex float-end d-grid gap-2 d-md-block">
+        <a class="btn btn-secondary mx-2 btn-lg" href="{% url 'History' %}" role="button">Transaction History</a>
+        <a class="btn btn-secondary mx-2 btn-lg" href="{% url 'Users' %}" role="button">Users</a>
+    </form>
+</div>
+
+{% endblock body %}
